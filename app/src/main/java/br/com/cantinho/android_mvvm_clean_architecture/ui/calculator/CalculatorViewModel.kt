@@ -28,5 +28,4 @@ class CalculatorViewModel: ViewModel() {
 
         }
     }
-
 }
