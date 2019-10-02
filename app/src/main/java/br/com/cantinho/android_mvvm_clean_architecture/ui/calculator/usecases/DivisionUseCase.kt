@@ -7,12 +7,8 @@ import br.com.cantinho.android_mvvm_clean_architecture.ui.calculator.Success
 
 class DivisionUseCase {
 
-    fun performDivision(paramA: Int, paramB: Int): OperationResult {
-
-        if (paramB == 0) {
-            return Error(R.string.division_failed)
-        }
-
+    fun performn(paramA: Int, paramB: Int): OperationResult {
         return Success( paramA / paramB )
     }
+
 }
