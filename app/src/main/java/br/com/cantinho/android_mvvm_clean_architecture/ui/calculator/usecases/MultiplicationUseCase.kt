@@ -5,7 +5,7 @@ import br.com.cantinho.android_mvvm_clean_architecture.ui.calculator.Success
 
 class MultiplicationUseCase {
 
-    fun performMultiplication(paramA: Int, paramB: Int): OperationResult {
+    fun perform(paramA: Int, paramB: Int): OperationResult {
         return Success( paramA * paramB )
     }
 

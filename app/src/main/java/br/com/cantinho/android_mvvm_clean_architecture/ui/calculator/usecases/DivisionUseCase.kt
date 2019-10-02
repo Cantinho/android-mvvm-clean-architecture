@@ -5,7 +5,7 @@ import br.com.cantinho.android_mvvm_clean_architecture.ui.calculator.Success
 
 class DivisionUseCase {
 
-    fun performDivision(paramA: Int, paramB: Int): OperationResult {
+    fun performn(paramA: Int, paramB: Int): OperationResult {
         return Success( paramA / paramB )
     }
 }
