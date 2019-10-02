@@ -10,9 +10,17 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
+<<<<<<< HEAD
     <string name="addiction_failed">"Addiction failed"</string>
     <string name="subtraction_failed">"Subtraction failed"</string>
     <string name="multiplication_failed">"Multiplication failed"</string>
     <string name="division_failed">"Division failed"</string>
 
+=======
+    <string name="sum_failed">"Sum failed"</string>
+    <string name="sum">+</string>
+    <string name="subtract">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+>>>>>>> 3af38b95ece33fec141ad2740f2bcf0f7ff643be
 </resources>
