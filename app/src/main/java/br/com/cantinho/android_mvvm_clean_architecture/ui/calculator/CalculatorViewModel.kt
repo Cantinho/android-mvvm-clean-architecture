@@ -21,10 +21,10 @@ class CalculatorViewModel: ViewModel() {
 
     fun doAction(action: Action) {
         when(action){
-            is Sum -> _operationResult.value = addictionUseCase.performAddiction( action.paramA, action.paramB )
-            is Subtract -> _operationResult.value = subtractionUseCase.performSubtraction( action.paramA, action.paramB )
-            is Multiply -> _operationResult.value = multiplicationUseCase.performMultiplication( action.paramA, action.paramB )
-            is Divide -> _operationResult.value = divisionUseCase.performDivision( action.paramA, action.paramB )
+            is Sum -> _operationResult.value = addictionUseCase.perform( action.paramA, action.paramB )
+            is Subtract -> _operationResult.value = subtractionUseCase.perform( action.paramA, action.paramB )
+            is Multiply -> _operationResult.value = multiplicationUseCase.perform( action.paramA, action.paramB )
+            is Divide -> _operationResult.value = divisionUseCase.performn( action.paramA, action.paramB )
 
         }
     }
