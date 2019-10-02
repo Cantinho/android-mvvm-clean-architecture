@@ -11,4 +11,8 @@
     <string name="login_failed">"Login failed"</string>
 
     <string name="sum_failed">"Sum failed"</string>
+    <string name="sum">+</string>
+    <string name="subtract">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
 </resources>

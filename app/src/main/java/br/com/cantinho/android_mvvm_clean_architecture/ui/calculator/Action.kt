@@ -4,3 +4,10 @@ sealed class Action {
 }
 
 data class Sum(val paramA: Int, val paramB: Int) : Action()
+
+data class Subtract(val paramA: Int, val paramB: Int) : Action()
+
+data class Divide(val paramA: Int, val paramB: Int) : Action()
+
+data class Multiply(val paramA: Int, val paramB: Int) : Action()
+

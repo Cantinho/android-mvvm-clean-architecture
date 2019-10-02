@@ -23,9 +23,25 @@ class CalculatorActivity : AppCompatActivity() {
                 is Success -> textViewResult.text = it.result.toString()
             }
         })
-        btnPerformOperation.setOnClickListener {
+
+        btnPerformOperationAddiction.setOnClickListener {
             calculatorViewModel.doAction(
                 Sum(this@CalculatorActivity.tietParamA.toInt(), this@CalculatorActivity.tietParamB.toInt()))
+        }
+
+        btnPerformOperationSubtraction.setOnClickListener {
+            calculatorViewModel.doAction(
+                Subtract(this@CalculatorActivity.tietParamA.toInt(), this@CalculatorActivity.tietParamB.toInt()))
+        }
+
+        btnPerformOperationMultiplication.setOnClickListener {
+            calculatorViewModel.doAction(
+                Multiply(this@CalculatorActivity.tietParamA.toInt(), this@CalculatorActivity.tietParamB.toInt()))
+        }
+
+        btnPerformOperationDivision.setOnClickListener {
+            calculatorViewModel.doAction(
+                Divide(this@CalculatorActivity.tietParamA.toInt(), this@CalculatorActivity.tietParamB.toInt()))
         }
     }
 }
