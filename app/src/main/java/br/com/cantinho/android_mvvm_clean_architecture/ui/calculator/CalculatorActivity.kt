@@ -4,31 +4,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import br.com.cantinho.android_mvvm_clean_architecture.R
 import br.com.cantinho.android_mvvm_clean_architecture.ext.toInt
 import kotlinx.android.synthetic.main.activity_calculator.*
+import org.koin.android.ext.android.inject
 
 class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var calculatorViewModel: CalculatorViewModel
+    // lazy inject BusinessService into property
+    private val calculatorViewModel : CalculatorViewModel by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
 
-        calculatorViewModel = ViewModelProviders.of(this).get(CalculatorViewModel::class.java)
-
         calculatorViewModel.operationResult.observe(this, Observer {
             when(it) {
                 is Success -> textViewResult.text = it.result.toString()
                 is Error -> textViewResult.text = getString(it.message)
-
             }
         })
-
-
-
     }
 
     override fun onClick(view: View) {

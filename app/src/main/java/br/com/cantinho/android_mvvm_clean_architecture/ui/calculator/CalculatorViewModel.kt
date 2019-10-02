@@ -25,7 +25,6 @@ class CalculatorViewModel: ViewModel() {
             is Subtract -> _operationResult.value = subtractionUseCase.perform( action.paramA, action.paramB )
             is Multiply -> _operationResult.value = multiplicationUseCase.perform( action.paramA, action.paramB )
             is Divide -> _operationResult.value = divisionUseCase.performn( action.paramA, action.paramB )
-
         }
     }
 }

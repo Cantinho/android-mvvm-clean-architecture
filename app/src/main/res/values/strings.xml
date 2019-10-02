@@ -15,6 +15,7 @@
     <string name="multiplication_failed">"Multiplication failed"</string>
     <string name="division_failed">"Division failed"</string>
     <string name="sum_failed">"Sum failed"</string>
+
     <string name="sum">+</string>
     <string name="subtract">-</string>
     <string name="multiply">*</string>
