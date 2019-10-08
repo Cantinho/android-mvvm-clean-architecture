@@ -18,7 +18,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner getInstrumentation()
     }
     buildTypes {
         release {
@@ -39,7 +39,10 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.0.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
 
     // Koin for Java
     implementation "org.koin:koin-java:$koinVersion"
@@ -54,4 +57,11 @@ dependencies {
     // Koin Android Experimental features
     implementation "org.koin:koin-android-ext:$koinVersion"
 
+    //Cucumber
+    androidTestImplementation 'info.cukes:cucumber-android:1.2.5'
+    androidTestImplementation 'info.cukes:cucumber-picocontainer:1.2.5'
+}
+
+def getInstrumentation() {
+    project.hasProperty('cucumber') ? 'br.com.cantinho.android_mvvm_clean_architecture.cucumber.runner.CucumberTestRunner' : 'androidx.test.runner.AndroidJUnitRunner'
 }
