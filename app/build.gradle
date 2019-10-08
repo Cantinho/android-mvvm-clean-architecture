@@ -63,5 +63,5 @@ dependencies {
 }
 
 def getInstrumentation() {
-    project.hasProperty('cucumber') ? 'br.com.cantinho.android_mvvm_clean_architecture.cucumber.runner.CucumberTestRunner' : 'android.support.test.runner.AndroidJUnitRunner'
+    project.hasProperty('cucumber') ? 'br.com.cantinho.android_mvvm_clean_architecture.cucumber.runner.CucumberTestRunner' : 'androidx.test.runner.AndroidJUnitRunner'
 }
