@@ -1,4 +1,4 @@
-package br.com.cantinho.android_mvvm_clean_architecture.cucumber.steps
+package br.com.cantinho.android_mvvm_clean_architecture.cucumber.steps.espresso
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
@@ -21,7 +21,6 @@ class FundamentalOperationsSteps{
     fun finishActivity() {
         activityRule.finishActivity()
     }
-
 
     @Given("^I start the application\$")
     fun i_start_app(){
@@ -53,8 +52,8 @@ class FundamentalOperationsSteps{
         onView(withId(R.id.btnPerformOperationMultiplication)).perform(click())
     }
 
-    @And("^I expect to see the result\$")
-    fun i_click_on_addition(){
+    @And("^I click on division button\$")
+    fun i_click_on_division_btn(){
         onView(withId(R.id.btnPerformOperationDivision)).perform(click())
     }
 
